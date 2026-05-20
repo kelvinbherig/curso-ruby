@@ -8,6 +8,7 @@ combos = [
 
 comboSelecionado = []
 
+system("clear")
 puts "Selecione seus itens"
 
 combos.each_with_index do |combo, index|
@@ -23,7 +24,7 @@ while loop
       comboSelecionado.push(combos[opcao - 1])
     when 2 
       comboSelecionado.push(combos[opcao - 1])
-    when 3 
+    when 3
       comboSelecionado.push(combos[opcao - 1])  
     else
       puts "Opção invalida"
@@ -33,4 +34,13 @@ while loop
   loop = gets.chomp.to_i === 1 ? true : false
 end
 
-puts comboSelecionado
+comboSelecionado.each do |combo|
+  puts "#{combo[:descricao]} ............... R$ #{combo[:preco]}"
+end
+
+total = comboSelecionado.reduce(0) do |acc, combo|
+  acc + combo[:preco]
+end
+
+puts "Total ............................. R$ #{total}"
+
