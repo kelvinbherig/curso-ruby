@@ -10,7 +10,10 @@ class ContaCorrente < Conta
   end
 
   def verificar_saldo
-    @saldo + @limite
+    puts "#############################"
+    puts "Saldo: R$ #{'%.2f' % @saldo}"
+    puts "Limite: R$ #{'%.2f' % @limite}"
+    puts "#############################"
   end
 
 end

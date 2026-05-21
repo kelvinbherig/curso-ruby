@@ -1,12 +1,11 @@
-require_relative "./conta.rb"
 require_relative "./conta_corrente"
+require_relative "./pessoa_fisica"
 
-maria = ContaCorrente.new 1, "Maria Cardoso"
-# lucas = Conta.new 2, "Lucas Henrique"
-# fabio = Conta.new 3, "Fabio José"
+maria = PessoaFisica.new "99988877755", "Maria Cardoso"
 
-puts "#{maria.numero} - #{maria.titular} - saldo: R$ #{maria.saldo}"
-# puts "#{lucas.numero} - #{lucas.titular} - saldo: R$ #{lucas.saldo}"
-# puts "#{fabio.numero} - #{fabio.titular} - saldo: R$ #{fabio.saldo}"
+#maria.exibir_dados
 
+mariaConta = ContaCorrente.new 1, maria
+
+mariaConta.exibir_dados_conta
 

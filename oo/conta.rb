@@ -29,4 +29,15 @@ class Conta
     end
   end
 
+  def exibir_dados_conta
+    p "########################"
+    p "Titular: #{titular.nome}"
+    p "Saldo Conta: R$ #{'%.2f' % @saldo}"
+    p "########################"
+  end
+
+  def verificar_saldo
+    puts "Saldo disponível: R$ #{'%.2f' % @saldo}"
+  end
+
 end
