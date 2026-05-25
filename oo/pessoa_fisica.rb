@@ -11,7 +11,9 @@ class PessoaFisica < Pessoa
 
   def exibir_dados
     p "############################"
-    p "Nome: #{@nome}\nCPF: #{@cpf}"
+    p "Nome: #{@nome}"
+    p "CPF: #{@cpf}"
+    #p "Endereco: #{@endereco.logradouro} - #{@endereco.cidade}/#{@endereco.estado}"
     p "############################"
   end
 end
